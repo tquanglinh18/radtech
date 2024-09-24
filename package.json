@@ -5,7 +5,7 @@
   "license": "MIT",
   "main": "index.html",
   "scripts": {
-    "start": "sass --watch ./assets/scss/main.scss ./assets/css/styles-scss.css --no-source-map"
+    "start": "sass --watch ./assets/scss/main.scss ./assets/css/styles.css --no-source-map"
   },
   "dependencies": {
     "sass": "^1.69.6",

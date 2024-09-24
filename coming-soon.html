@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RadTech</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <style>
+      #comming-soon-section {
+        width: 100%;
+        min-height: 100vh;
+        background-image: url("../images/bg_main_section.png");
+        background-size: cover;
+        background-position: center right;
+        background-repeat: no-repeat;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      @media (min-width: 768px) {
+        #comming-soon-section {
+          padding: 2rem 10%;
+        }
+      }
+
+      .section-contents {
+        width: 100%;
+        max-width: 580px;
+        border-radius: 30px;
+        padding: 3rem 1.5rem;
+        background-color: rgba(34, 109, 169, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+      @media (min-width: 768px) {
+        .section-contents {
+          padding: 3.5rem 2rem;
+        }
+      }
+      .section-contents__logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .section-contents__logo img {
+        width: 100%;
+        max-width: 128px;
+        aspect-ratio: 128/70;
+      }
+      .section-contents__title {
+        width: 100%;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      .section-contents__title span {
+        color: #edd271;
+      }
+      @media (min-width: 768px) {
+        .section-contents__title {
+          font-size: 1.25rem;
+        }
+      }
+      .section-contents__desc {
+        width: 100%;
+        color: #ffffff;
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (min-width: 768px) {
+        .section-contents__desc {
+          margin-bottom: 1rem;
+          font-size: 1rem;
+        }
+      }
+      .section-contents__desc p {
+        width: 100%;
+      }
+      .section-contents__lst-room-location {
+        width: 100%;
+        border-radius: 1.25rem;
+        padding: 1rem 1.5rem;
+        background-color: #edd271;
+      }
+      @media (min-width: 768px) {
+        .section-contents__lst-room-location {
+          padding: 2rem 3rem;
+        }
+      }
+      .section-contents .room-location {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+      .section-contents .room-location p {
+        width: 100%;
+        font-size: 0.75rem;
+      }
+      @media (min-width: 768px) {
+        .section-contents .room-location p {
+          font-size: 1rem;
+        }
+      }
+      .section-contents .room-location h1 {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+      @media (min-width: 768px) {
+        .section-contents .room-location h1 {
+          font-size: 1.25rem;
+        }
+      }
+      .section-contents .room-location__item {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .section-contents .room-location__item--icon {
+        width: 16px;
+        height: 16px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+      .section-contents .room-location__item p {
+        color: #252525;
+        font-size: 0.75rem;
+      }
+      @media (min-width: 768px) {
+        .section-contents .room-location__item p {
+          font-size: 1rem;
+        }
+      }
+      .section-contents .room-location:last-child {
+        margin-bottom: 0rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div id="comming-soon-section" class="">
+        <div class="section-contents">
+          <div class="section-contents__logo">
+            <img src="./assets/images/logo_radtech.png" alt="" />
+          </div>
+
+          <h1 class="section-contents__title">
+            Cảm ơn bạn !<br />
+            đã quan tâm đến dịch vụ của <span>RADTECH</span>
+          </h1>
+
+          <div class="section-contents__desc">
+            <p>Chúng tôi đang xây dựng và sẽ sớm hoàn thiện website.</p>
+            <p>Bạn có thể ghé qua địa chỉ phòng khám để sử dụng dịch vụ.</p>
+          </div>
+
+          <div class="section-contents__lst-room-location">
+            <div class="room-location">
+              <p>Cơ sở 1:</p>
+
+              <h1>Trung tâm Chuẩn đoán hình ảnh Radtech Yết Kiêu - Hà Nội</h1>
+
+              <div class="room-location__item">
+                <div class="room-location__item--icon">
+                  <img src="./assets/images/ic_location.png" alt="" />
+                </div>
+                <p>Số 1A Yết Kiêu, Quận Hoàn Kiếm, Hà Nội</p>
+              </div>
+
+              <div class="room-location__item">
+                <div class="room-location__item--icon">
+                  <img src="./assets/images/ic_phone.png" alt="" />
+                </div>
+                <p>0972 981 001</p>
+              </div>
+            </div>
+
+            <div class="room-location">
+              <p>Cơ sở 2:</p>
+
+              <h1>Trung tâm Chuẩn đoán hình ảnh Radtech Thạch Thất - Hà Nội</h1>
+
+              <div class="room-location__item">
+                <div class="room-location__item--icon">
+                  <img src="./assets/images/ic_location.png" alt="" />
+                </div>
+                <p>Số 70, Đường 420 Kim Quan, Thạch Thất, Hà Nội</p>
+              </div>
+
+              <div class="room-location__item">
+                <div class="room-location__item--icon">
+                  <img src="./assets/images/ic_phone.png" alt="" />
+                </div>
+                <p>0975 067 969</p>
+              </div>
+            </div>
+
+            <div class="room-location">
+              <p>Cơ sở 3:</p>
+
+              <h1>Trung tâm Chuẩn đoán hình ảnh Radtech Nha Trang</h1>
+
+              <div class="room-location__item">
+                <div class="room-location__item--icon">
+                  <img src="./assets/images/ic_location.png" alt="" />
+                </div>
+                <p>11 Lý Thánh Tôn, Vạn Thạnh, Nha Trang, Khánh Hoà</p>
+              </div>
+
+              <div class="room-location__item">
+                <div class="room-location__item--icon">
+                  <img src="./assets/images/ic_phone.png" alt="" />
+                </div>
+                <p>0966 870 002</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
