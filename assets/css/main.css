@@ -38,6 +38,7 @@ body {
   font-family: "Montserrat-Regular";
   font-weight: normal;
   font-style: normal;
+  color: #031432;
 }
 
 h1 {
@@ -46,15 +47,35 @@ h1 {
   font-style: normal;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* .container-page {
-  max-width: 1200px;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container-page {
   width: 100%;
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-} */
+  padding: 1.5rem 1rem;
+}
+
+button {
+  border: unset;
+  background-color: inherit;
+}
