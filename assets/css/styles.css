@@ -30,6 +30,14 @@
   gap: 0.5rem;
 }
 
+.grid-cols-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-content: center;
+  gap: 1rem;
+}
+
 .grid-cols-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -38,8 +46,26 @@
   gap: 1rem;
 }
 
+.grid-cols-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.grid-start-item {
+  justify-items: start;
+}
+
 header {
   box-shadow: 4px 4px 8px 4px #f0f2f5;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  background-color: white;
 }
 
 .header {
@@ -236,21 +262,24 @@ header {
   width: fit-content;
   min-width: 72px;
   border: none;
-  background: #226da9;
+  background: linear-gradient(to right, #226da9, #0d2b43);
   padding: 0.75rem 1rem;
   border-radius: 10px;
-  color: inherit;
+  color: white;
   font-weight: 600;
 }
-.btn-base--gradient {
-  background: linear-gradient(to right, #226da9, #0d2b43);
+.btn-base--blue-226DA9 {
+  padding: 1rem 2rem;
+  border-radius: 6rem;
+  color: #edd271;
+  background: #226da9;
 }
 .btn-base--yellow {
   padding: 1rem 2rem;
   border-radius: 6rem;
   box-shadow: 0px 8px 23px 0px rgba(65, 132, 247, 0.2392156863);
   color: #226da9;
-  background-color: #edd271;
+  background: #edd271;
 }
 
 #banner-carousel {
@@ -318,14 +347,13 @@ header {
 .section-item {
   width: 100%;
   max-width: 1200px;
-  margin: 2.5rem auto;
-  padding: 2rem 1rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .section-item__header {
   width: 100%;
@@ -615,6 +643,88 @@ header {
   transform: translateY(-0.75rem);
 }
 
-header {
+#contact-us {
   width: 100%;
+  background-color: #edd271;
+  color: #252525;
+}
+#contact-us h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+#contact-us .contact-method {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+#contact-us .contact-method--item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  gap: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+#contact-us .contact-method .contact-method-lst {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+}
+#contact-us .set-calander-box {
+  width: 90%;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  background-color: white;
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  gap: 1rem;
+}
+#contact-us .set-calander-box .btn-base {
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  background-color: #226da9;
+  color: white;
+}
+footer .logo-radtech img {
+  margin-bottom: 1.5rem;
+}
+footer .room-location {
+  width: 100%;
+  line-height: 1.5rem;
+}
+footer .room-location h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+footer .room-location--contact-method {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer .first-part {
+  margin-bottom: 2rem;
+}
+footer .second-part {
+  width: 100%;
+  border-top: 1px solid white;
+  padding-top: 1.5rem;
 }
