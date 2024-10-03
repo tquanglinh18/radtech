@@ -252,10 +252,15 @@ header {
 }
 .header__second .tab-items {
   padding: 0 0.5rem;
+  transition: all 0.3s;
+}
+.header__second .tab-items:hover {
+  color: #226da9;
 }
 .header__second .search-result {
   color: #226da9;
   font-size: 18px;
+  transition: all 0.3s;
 }
 
 .btn-base {
@@ -282,35 +287,51 @@ header {
   background: #edd271;
 }
 
-#banner-carousel {
+.carousel {
   width: 100%;
   aspect-ratio: 2048/733;
   margin-bottom: 1rem;
 }
-#banner-carousel .carousel-item {
+.carousel .carousel-item {
   width: 100%;
 }
-#banner-carousel .carousel-item img {
+.carousel .carousel-item img {
   width: 100%;
   aspect-ratio: 2048/733;
   object-fit: cover;
 }
-#banner-carousel .carousel-indicators {
+.carousel .carousel-indicators {
   position: relative;
   margin-top: 1rem;
 }
-#banner-carousel .carousel-indicators li {
-  background-color: #d9d9d9;
+.carousel .carousel-indicators li {
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 0.5rem;
+}
+.carousel .carousel-indicators li.active {
+  border: 1px solid #226da9;
+}
+.carousel .carousel-indicators li.active .dot-inner {
+  background-color: #226da9;
+}
+.carousel .carousel-indicators li .dot-inner {
+  background-color: #252525;
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  margin: 0 1rem;
-}
-#banner-carousel .carousel-indicators li.active {
-  background-color: #226da9;
 }
 
-#featured-news .featured-news-item {
+.featured-news-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -319,28 +340,28 @@ header {
   align-items: start;
   width: 100%;
 }
-#featured-news .featured-news-item__img {
+.featured-news-item__img {
   width: 50%;
   box-shadow: 0px 22px 32px 0px rgba(63, 135, 247, 0.1607843137);
   border-radius: 2rem;
 }
-#featured-news .featured-news-item__img img {
+.featured-news-item__img img {
   width: 100%;
   aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 2rem;
 }
-#featured-news .featured-news-item__detail {
+.featured-news-item__detail {
   width: 45%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-#featured-news .featured-news-item__detail h3 {
+.featured-news-item__detail h3 {
   font-size: 2rem;
   font-weight: bold;
 }
-#featured-news .featured-news-item__detail p {
+.featured-news-item__detail p {
   line-height: 1.5rem;
 }
 
@@ -348,7 +369,7 @@ header {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -411,7 +432,7 @@ header {
   padding: 1.5rem;
   font-size: 20px;
   line-height: 1.25rem;
-  color: #fff;
+  color: #ffffff;
 }
 
 .services-layout {
@@ -444,10 +465,6 @@ header {
 }
 #services .nav-tabs .active {
   color: #226da9;
-}
-#services .nav-tabs button:focus {
-  outline: none;
-  outline-offset: none;
 }
 
 .doctor-card {
@@ -489,30 +506,44 @@ header {
   text-align: center;
 }
 
-#team-of-doctors #lst-doctor .carousel-indicators {
-  position: relative;
-  margin: 1rem auto;
+#team-of-doctors #lst-doctor .slick-track {
+  padding: 2rem 0;
 }
-#team-of-doctors #lst-doctor .carousel-indicators li {
-  background-color: #d9d9d9;
+#team-of-doctors #lst-doctor .slick-slide.slick-current + .slick-slide {
+  scale: 1;
+  transition: all 1s;
 }
-#team-of-doctors #lst-doctor .carousel-indicators .active {
-  background-color: #226da9;
+#team-of-doctors #lst-doctor .slick-slide,
+#team-of-doctors #lst-doctor .doctor-info:first-child {
+  scale: 0.9;
+  margin: auto;
+  transition: all 1s;
 }
-#team-of-doctors #lst-doctor .carousel-inner {
+#team-of-doctors #lst-doctor ul {
   display: flex;
-  gap: 1rem;
-}
-#team-of-doctors #lst-doctor .carousel-inner .carousel-item {
-  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-right: 0 !important;
-  width: 80%;
+  gap: 0.5rem;
+  gap: 1rem;
+  margin: 2rem auto;
 }
-#team-of-doctors #lst-doctor .carousel-inner .active {
-  width: 100%;
-  margin: 0 auto;
+#team-of-doctors #lst-doctor ul li {
+  background-color: #d9d9d9;
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+#team-of-doctors #lst-doctor ul li::marker {
+  content: "";
+}
+#team-of-doctors #lst-doctor ul li button {
+  height: 0;
+  overflow: hidden;
+}
+#team-of-doctors #lst-doctor ul li.slick-active {
+  background-color: #226da9;
 }
 
 #ctm-feedback .section-item__header h3 {
@@ -549,6 +580,7 @@ header {
 }
 .ctm-feedback-card__rating--star {
   width: 100%;
+  margin-bottom: 0.25rem;
 }
 .ctm-feedback-card__rating--star img {
   width: 100%;
@@ -653,7 +685,6 @@ header {
   line-height: 1.75rem;
 }
 #contact-us .contact-method {
-  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -681,7 +712,7 @@ header {
   gap: 1rem;
 }
 #contact-us .set-calander-box {
-  width: 90%;
+  width: 100%;
   border-radius: 1.25rem;
   padding: 2rem;
   background-color: white;
@@ -705,21 +736,6 @@ footer {
 footer .logo-radtech img {
   margin-bottom: 1.5rem;
 }
-footer .room-location {
-  width: 100%;
-  line-height: 1.5rem;
-}
-footer .room-location h3 {
-  font-size: 1rem;
-  font-weight: 700;
-}
-footer .room-location--contact-method {
-  width: 100%;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 0.5rem;
-}
 footer .first-part {
   margin-bottom: 2rem;
 }
@@ -727,4 +743,159 @@ footer .second-part {
   width: 100%;
   border-top: 1px solid white;
   padding-top: 1.5rem;
+}
+
+.room-location {
+  width: 100%;
+  line-height: 1.5rem;
+}
+.room-location h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.room-location--contact-method {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+#vision-mission-value {
+  background-color: wheat;
+}
+#vision-mission-value .section-item__body {
+  text-align: center;
+  margin-bottom: 0;
+}
+#vision-mission-value .section-item__body h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+  color: #226da9;
+}
+#vision-mission-value .section-item__body p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  text-align: center;
+  color: #031432;
+  padding: 0 1rem 1rem 1rem;
+}
+#vision-mission-value #banner-carousel {
+  margin-bottom: 0;
+}
+#vision-mission-value #banner-carousel .carousel-inner {
+  padding: 1rem 1rem 0 1rem;
+}
+#vision-mission-value #banner-carousel .carousel-inner .carousel-item {
+  aspect-ratio: 1136/622;
+}
+#vision-mission-value #banner-carousel .carousel-inner .carousel-item img {
+  aspect-ratio: 1136/622;
+  border-radius: 2.875rem;
+}
+
+#lst-medical-clinic {
+  color: #252525;
+}
+#lst-medical-clinic .nav {
+  width: 100%;
+  padding: 2rem 1rem;
+  border: 1px solid #226da9;
+  box-shadow: 0px 100px 80px 0px rgba(0, 0, 0, 0.0705882353);
+  border-radius: 1.5rem;
+  transition: all 0.3s;
+}
+#lst-medical-clinic .nav--title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+#lst-medical-clinic .nav-link {
+  padding: 0.5rem 0;
+  border-radius: 0.625rem;
+  color: #1d1d1d;
+  text-align: start;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+#lst-medical-clinic .nav-link:last-child {
+  margin-bottom: 0;
+}
+#lst-medical-clinic .nav-link p {
+  padding: 0 1rem;
+  border-left: 2px solid #226da9;
+}
+#lst-medical-clinic .nav .active {
+  background-color: #edd271;
+}
+#lst-medical-clinic .room-location {
+  margin-bottom: 1rem;
+}
+#lst-medical-clinic .room-location h3 {
+  font-size: 1.25rem;
+}
+#lst-medical-clinic .carousel {
+  position: relative;
+  margin-bottom: 1rem;
+}
+#lst-medical-clinic .carousel-inner {
+  padding: 1rem 0;
+}
+#lst-medical-clinic .carousel-inner .carousel-item {
+  border-radius: 2.75rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  aspect-ratio: 756/424;
+}
+#lst-medical-clinic .carousel-inner .carousel-item img {
+  width: 100%;
+  aspect-ratio: 756/424;
+  border-radius: 2.75rem;
+  object-fit: cover;
+}
+#lst-medical-clinic .carousel-indicators {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  left: 0;
+}
+#lst-medical-clinic .carousel-indicators li {
+  background-color: white;
+}
+#lst-medical-clinic .carousel-indicators li .dot-inner {
+  background-color: #ffffff;
+}
+#lst-medical-clinic .carousel-indicators li.active .dot-inner {
+  background-color: #226da9;
+}
+#lst-medical-clinic .room-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  gap: 1rem;
+}
+#lst-medical-clinic .room-info p {
+  width: 100%;
+}
+
+#featured-news-event .featured-news-item {
+  border-radius: 2rem;
+  background-color: #ffffff;
+  color: #3e3e3e;
+  font-size: 14px;
+}
+#featured-news-event .featured-news-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+#featured-news-event .featured-news-item__img img {
+  aspect-ratio: 656/377;
+}
+#featured-news-event .featured-news-item__detail {
+  width: 50%;
+  padding: 2rem 3rem;
 }

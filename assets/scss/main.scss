@@ -6,13 +6,14 @@ $text-main-color: #031432;
 $grey-F0F2F5: #f0f2f5;
 $yellow-EDD271: #edd271;
 $grey-D9D9D9: #d9d9d9;
-$white-color: #fff;
+$white-color: #ffffff;
 $grey-252525: #252525;
 $blue-6C87AE: #6c87ae;
 $shadow-0309320A: #0309320a;
 $shadow-0000001A: #0000001a;
 $black-3E3E3E: #3e3e3e;
 $grey-999999: #999999;
+$black-1D1D1D: #1d1d1d;
 
 @mixin flex-col-center {
   display: flex;
@@ -258,10 +259,15 @@ header {
 
     .tab-items {
       padding: 0 0.5rem;
+      transition: all 0.3s;
+      &:hover {
+        color: $bule-226DA9;
+      }
     }
     .search-result {
       color: $bule-226DA9;
       font-size: 18px;
+      transition: all 0.3s;
     }
   }
 }
@@ -292,7 +298,7 @@ header {
   }
 }
 
-#banner-carousel {
+.carousel {
   width: 100%;
   aspect-ratio: 2048/733;
   margin-bottom: 1rem;
@@ -310,49 +316,60 @@ header {
     margin-top: 1rem;
 
     li {
-      background-color: $grey-D9D9D9;
-      width: 10px;
-      height: 10px;
+      background-color: transparent;
+      width: 18px;
+      height: 18px;
       border-radius: 100%;
-      margin: 0 1rem;
+      aspect-ratio: 1/1;
+      border: 1px solid transparent;
+      @include flex-col-center();
+      margin: 0 0.5rem;
 
       &.active {
-        background-color: $bule-226DA9;
+        border: 1px solid $bule-226DA9;
+        .dot-inner {
+          background-color: $bule-226DA9;
+        }
+      }
+
+      .dot-inner {
+        background-color: $grey-252525;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
       }
     }
   }
 }
 
-#featured-news {
-  .featured-news-item {
-    @include flex-row-between();
-    align-items: start;
-    width: 100%;
-    &__img {
-      width: 50%;
-      box-shadow: 0px 22px 32px 0px #3f87f729;
+.featured-news-item {
+  @include flex-row-between();
+  align-items: start;
+  width: 100%;
+  &__img {
+    width: 50%;
+    box-shadow: 0px 22px 32px 0px #3f87f729;
+    border-radius: 2rem;
+    img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
       border-radius: 2rem;
-      img {
-        width: 100%;
-        aspect-ratio: 4/3;
-        object-fit: cover;
-        border-radius: 2rem;
-      }
+    }
+  }
+
+  &__detail {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h3 {
+      font-size: 2rem;
+      font-weight: bold;
     }
 
-    &__detail {
-      width: 45%;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      h3 {
-        font-size: 2rem;
-        font-weight: bold;
-      }
-
-      p {
-        line-height: 1.5rem;
-      }
+    p {
+      line-height: 1.5rem;
     }
   }
 }
@@ -361,7 +378,7 @@ header {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -456,11 +473,6 @@ header {
     .active {
       color: $bule-226DA9;
     }
-
-    button:focus {
-      outline: none;
-      outline-offset: none;
-    }
   }
 }
 
@@ -503,31 +515,42 @@ header {
 
 #team-of-doctors {
   #lst-doctor {
-    .carousel-indicators {
-      position: relative;
-      // background-color: #031432;
-      margin: 1rem auto;
-      li {
-        background-color: $grey-D9D9D9;
-      }
-      .active {
-        background-color: $bule-226DA9;
-      }
+    .slick-track {
+      padding: 2rem 0;
+    }
+    .slick-slide.slick-current + .slick-slide {
+      scale: 1;
+      transition: all 01s;
     }
 
-    .carousel-inner {
-      display: flex;
+    .slick-slide,
+    .doctor-info:first-child {
+      scale: 0.9;
+      margin: auto;
+      transition: all 1s;
+    }
+
+    ul {
+      @include flex-row-center();
       gap: 1rem;
-      .carousel-item {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 0 !important;
-        width: 80%;
-      }
-      .active {
-        width: 100%;
-        margin: 0 auto;
+      margin: 2rem auto;
+
+      li {
+        background-color: $grey-D9D9D9;
+        width: 2rem;
+        height: 0.25rem;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        &::marker {
+          content: "";
+        }
+        button {
+          height: 0;
+          overflow: hidden;
+        }
+        &.slick-active {
+          background-color: $bule-226DA9;
+        }
       }
     }
   }
@@ -570,6 +593,7 @@ header {
     margin-bottom: 1rem;
     &--star {
       width: 100%;
+      margin-bottom: 0.25rem;
       img {
         width: 100%;
         max-width: 168px;
@@ -673,7 +697,6 @@ header {
     line-height: 1.75rem;
   }
   .contact-method {
-    width: 90%;
     height: 100%;
     @include flex-col-between();
 
@@ -696,7 +719,7 @@ header {
   }
 
   .set-calander-box {
-    width: 90%;
+    width: 100%;
     border-radius: 1.25rem;
     padding: 2rem;
     background-color: white;
@@ -718,22 +741,6 @@ footer {
       margin-bottom: 1.5rem;
     }
   }
-  .room-location {
-    width: 100%;
-    line-height: 1.5rem;
-
-    h3 {
-      font-size: 1rem;
-      font-weight: 700;
-    }
-    &--contact-method {
-      width: 100%;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      gap: 0.5rem;
-    }
-  }
 
   .first-part {
     margin-bottom: 2rem;
@@ -743,5 +750,180 @@ footer {
     width: 100%;
     border-top: 1px solid white;
     padding-top: 1.5rem;
+  }
+}
+
+.room-location {
+  width: 100%;
+  line-height: 1.5rem;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  &--contact-method {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 0.5rem;
+  }
+}
+
+#vision-mission-value {
+  background-color: wheat;
+  .section-item {
+    &__body {
+      text-align: center;
+      margin-bottom: 0;
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 36px;
+        text-align: center;
+        color: $bule-226DA9;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+        text-align: center;
+        color: $text-main-color;
+        padding: 0 1rem 1rem 1rem;
+      }
+    }
+  }
+
+  #banner-carousel {
+    margin-bottom: 0;
+    .carousel-inner {
+      padding: 1rem 1rem 0 1rem;
+      .carousel-item {
+        aspect-ratio: 1136/622;
+        img {
+          aspect-ratio: 1136/622;
+          border-radius: 2.875rem;
+        }
+      }
+    }
+  }
+}
+
+#lst-medical-clinic {
+  color: $grey-252525;
+  .nav {
+    width: 100%;
+    padding: 2rem 1rem;
+    border: 1px solid $bule-226DA9;
+    box-shadow: 0px 100px 80px 0px #00000012;
+    border-radius: 1.5rem;
+    transition: all 0.3s;
+
+    &--title {
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    &-link {
+      padding: 0.5rem 0;
+      border-radius: 0.625rem;
+      color: $black-1D1D1D;
+      text-align: start;
+      margin-bottom: 1rem;
+      transition: all 0.3s;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      p {
+        padding: 0 1rem;
+        border-left: 2px solid $bule-226DA9;
+      }
+    }
+
+    .active {
+      background-color: $yellow-EDD271;
+    }
+  }
+
+  .room-location {
+    margin-bottom: 1rem;
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .carousel {
+    position: relative;
+    margin-bottom: 1rem;
+
+    &-inner {
+      padding: 1rem 0;
+      .carousel-item {
+        border-radius: 2.75rem;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        aspect-ratio: 756/424;
+
+        img {
+          width: 100%;
+          aspect-ratio: 756/424;
+          border-radius: 2.75rem;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &-indicators {
+      position: absolute;
+      bottom: 1rem;
+      right: 0;
+      left: 0;
+
+      li {
+        background-color: white;
+        .dot-inner {
+          background-color: $white-color;
+        }
+
+        &.active {
+          .dot-inner {
+            background-color: $bule-226DA9;
+          }
+        }
+      }
+    }
+  }
+
+  .room-info {
+    width: 100%;
+    @include flex-col-center();
+    gap: 1rem;
+    p {
+      width: 100%;
+    }
+  }
+}
+
+#featured-news-event {
+  .featured-news-item {
+    border-radius: 2rem;
+    background-color: $white-color;
+    color: $black-3E3E3E;
+    font-size: 14px;
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    &__img {
+      img {
+        aspect-ratio: 656/377;
+      }
+    }
+    &__detail {
+      width: 50%;
+      padding: 2rem 3rem;
+    }
   }
 }
