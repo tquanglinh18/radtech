@@ -18,6 +18,9 @@ $grey-EEEEEE: #eeeeee;
 $grey-DDDDDD: #dddddd;
 $black-222222: #222222;
 $black-333333: #333333;
+$light-blue-CEE8FA: #cee8fa;
+$grey-534E56: #534e56;
+$blue-132432: #132432;
 
 @mixin flex-col-center {
   display: flex;
@@ -402,6 +405,10 @@ header {
     &--center {
       text-align: center;
     }
+
+    span {
+      color: $bule-226DA9;
+    }
   }
 
   &__body {
@@ -476,6 +483,7 @@ header {
 
     .active {
       color: $bule-226DA9;
+      background-color: transparent;
     }
   }
 }
@@ -699,6 +707,11 @@ header {
   h3 {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  p {
+    font-weight: normal;
+    font-size: 1.25rem;
   }
   .contact-method {
     height: 100%;
@@ -1142,6 +1155,73 @@ footer {
       border-radius: 1rem;
       color: $white-color;
       background-color: $bule-226DA9;
+    }
+  }
+}
+
+#banner-intro {
+  width: 100%;
+  aspect-ratio: 1440/732;
+  background: linear-gradient(
+    to left bottom,
+    #00b0ab -50.3%,
+    rgba(0, 176, 171, 0) 45.47%
+  );
+  .section-item {
+    position: relative;
+    top: 15%;
+    max-width: 768px;
+    margin-left: 0;
+  }
+}
+
+#video-intro {
+  background-color: $light-blue-CEE8FA;
+  background-image: url("../images/bg_video_intro.png");
+  background-position: top left;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+#benefit-intro {
+  background-color: $light-blue-CEE8FA;
+
+  .lst-benefit {
+    @include grid-cols-3();
+  }
+
+  .benefit-item {
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    &__order-item {
+      width: 64px;
+      height: 64px;
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
+    }
+    &__detail {
+      width: 100%;
+      color: $blue-132432;
+      @include flex-col-center();
+      justify-content: start;
+      h3 {
+        width: 100%;
+        font-size: 1.125rem;
+        font-weight: bold;
+        line-height: 27px;
+        text-align: left;
+        margin-bottom: 0;
+      }
+      p {
+        width: 100%;
+        line-height: 1.5rem;
+        text-align: left;
+        color: $grey-534E56;
+      }
     }
   }
 }

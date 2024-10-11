@@ -390,6 +390,9 @@ header {
 .section-item__header--center {
   text-align: center;
 }
+.section-item__header span {
+  color: #226da9;
+}
 .section-item__body {
   width: 100%;
   margin-bottom: 1rem;
@@ -465,6 +468,7 @@ header {
 }
 #services .nav-tabs .active {
   color: #226da9;
+  background-color: transparent;
 }
 
 .doctor-card {
@@ -683,6 +687,10 @@ header {
 #contact-us h3 {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+#contact-us p {
+  font-weight: normal;
+  font-size: 1.25rem;
 }
 #contact-us .contact-method {
   height: 100%;
@@ -1096,4 +1104,73 @@ footer .second-part {
   border-radius: 1rem;
   color: #ffffff;
   background-color: #226da9;
+}
+
+#banner-intro {
+  width: 100%;
+  aspect-ratio: 1440/732;
+  background: linear-gradient(to left bottom, #00b0ab -50.3%, rgba(0, 176, 171, 0) 45.47%);
+}
+#banner-intro .section-item {
+  position: relative;
+  top: 15%;
+  max-width: 768px;
+  margin-left: 0;
+}
+
+#video-intro {
+  background-color: #cee8fa;
+  background-image: url("../images/bg_video_intro.png");
+  background-position: top left;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+#benefit-intro {
+  background-color: #cee8fa;
+}
+#benefit-intro .lst-benefit {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-content: center;
+  gap: 1.5rem;
+}
+#benefit-intro .benefit-item {
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+}
+#benefit-intro .benefit-item__order-item {
+  width: 64px;
+  height: 64px;
+}
+#benefit-intro .benefit-item__order-item img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+#benefit-intro .benefit-item__detail {
+  width: 100%;
+  color: #132432;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: start;
+}
+#benefit-intro .benefit-item__detail h3 {
+  width: 100%;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 27px;
+  text-align: left;
+  margin-bottom: 0;
+}
+#benefit-intro .benefit-item__detail p {
+  width: 100%;
+  line-height: 1.5rem;
+  text-align: left;
+  color: #534e56;
 }

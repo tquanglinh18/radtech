@@ -38,6 +38,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: #031432;
+  background-color: #F8F9FE;
 }
 
 h1 {
@@ -83,3 +84,4 @@ button:focus {
   outline: none;
   outline-offset: none;
 }
+ 
