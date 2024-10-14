@@ -1174,3 +1174,29 @@ footer .second-part {
   text-align: left;
   color: #534e56;
 }
+
+#register-form {
+  background-color: #ffffff;
+}
+
+.input-field {
+  width: 100%;
+}
+.input-field label {
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.25rem;
+  text-align: left;
+}
+.input-field span {
+  color: #d40000;
+}
+.input-field input, .input-field select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: #031432;
+  background-color: #f0f2f5;
+}

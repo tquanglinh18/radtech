@@ -21,6 +21,7 @@ $black-333333: #333333;
 $light-blue-CEE8FA: #cee8fa;
 $grey-534E56: #534e56;
 $blue-132432: #132432;
+$red-D40000: #d40000;
 
 @mixin flex-col-center {
   display: flex;
@@ -1223,5 +1224,32 @@ footer {
         color: $grey-534E56;
       }
     }
+  }
+}
+
+#register-form {
+  background-color: $white-color;
+}
+
+.input-field {
+  width: 100%;
+  label {
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.25rem;
+    text-align: left;
+  }
+  span {
+    color: $red-D40000;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: $text-main-color;
+    background-color: $grey-F0F2F5;
   }
 }
