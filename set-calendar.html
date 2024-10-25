@@ -81,105 +81,202 @@
 
         <div class="header__second">
           <div class="tab-items">
-            <a href="/index.html"> Trang chủ </a>
+            <a href="./"> Trang chủ </a>
           </div>
           <div class="tab-items">
-            <a href="/introduction.html"> Giới thiệu </a>
+            <a href="./introduction.html"> Giới thiệu </a>
           </div>
           <div class="tab-items">
-            <a href=""> Dịch vụ </a>
+            <a href="./services-x-quang.html"> Dịch vụ </a>
           </div>
           <div class="tab-items">
-            <a href="/news.html"> Tin tức - Sự kiện </a>
+            <a href="./news.html"> Tin tức - Sự kiện </a>
           </div>
           <div class="tab-items search-result">
             <a href=""> Tra cứu kết quả </a>
           </div>
           <div class="tab-items">
-            <button class="btn-base btn-base--gradient">Đặt lịch khám</button>
+            <a href="./set-calendar.html" class="btn-base btn-base--gradient">Đặt lịch khám</a>
           </div>
         </div>
       </div>
     </header>
 
-    <section>
-      <div id="register-form" class="section-item">
-        <div class="section-item__header">
-          <h1>Nội dung đặt hẹn</h1>
-        </div>
-        <div class="section-item__body">
-          <div class="">
-            <div class="input-field">
-              <label for="room-location">Chọn cơ sở <span>*</span> </label>
-              <select
-                type="text"
-                name=""
-                id="room-location"
-                placeholder="Chọn cơ sở"
-              >
-                <option value="1">
-                  CS1: Trung tâm Chuẩn đoán hình ảnh Radtech Yết Kiêu - Hà Nội
-                </option>
-                <option value="2">
-                  CS2: Trung tâm Chuẩn đoán hình ảnh Radtech Thạch Thất - Hà Nội
-                </option>
-                <option value="3">
-                  CS3: Trung tâm Chuẩn đoán hình ảnh Radtech Nha Trang
-                </option>
-              </select>
-            </div>
-
-            <div class="input-field">
-              <label for="lst-services">Chọn dịch vụ <span>*</span> </label>
-              <select
-                type="text"
-                name=""
-                id="lst-services"
-                placeholder="Chọn dịch vụ"
-              >
-                <option value="1">Chụp X-Quang</option>
-                <option value="2">Chụp Cộng hưởng từ</option>
-                <option value="3">Siêu âm</option>
-              </select>
-            </div>
+    <section class="container-section">
+      <div id="register-form">
+        <div class="section-item">
+          <div class="section-item__header">
+            <h1>Nội dung đặt hẹn</h1>
           </div>
+          <div class="section-item__body">
+            <div class="body-part">
+              <div class="input-field">
+                <label for="room-location">Chọn cơ sở <span>*</span> </label>
+                <select
+                  type="text"
+                  name=""
+                  id="room-location"
+                  placeholder="Chọn cơ sở"
+                >
+                  <option value="1">
+                    CS1: Trung tâm Chuẩn đoán hình ảnh Radtech Yết Kiêu - Hà Nội
+                  </option>
+                  <option value="2">
+                    CS2: Trung tâm Chuẩn đoán hình ảnh Radtech Thạch Thất - Hà
+                    Nội
+                  </option>
+                  <option value="3">
+                    CS3: Trung tâm Chuẩn đoán hình ảnh Radtech Nha Trang
+                  </option>
+                </select>
+              </div>
 
-          <div class="">
-            <div class="select-date">
-              <h3 for="">Chọn lịch khám *</h3>
-              <div class="">
-                <div class="input-ratio-label-field">
-                  <label for="1">
-                    <h3>22/3</h3>
-                    <p>Thứ 3</p>
-                  </label>
-                  <input type="radio" name="select-date" id="1" checked />
-                </div>
-
-                <div class="input-ratio-label-field">
-                  <label for="2">
-                    <h3>22/3</h3>
-                    <p>Thứ 3</p>
-                  </label>
-                  <input type="radio" name="select-date" id="2" />
-                </div>
-
-                <div class="input-ratio-label-field">
-                  <label for="3">
-                    <h3>22/3</h3>
-                    <p>Thứ 3</p>
-                  </label>
-                  <input type="radio" name="select-date" id="3" />
-                </div>
+              <div class="input-field">
+                <label for="lst-services">Chọn dịch vụ <span>*</span> </label>
+                <select
+                  type="text"
+                  name=""
+                  id="lst-services"
+                  placeholder="Chọn dịch vụ"
+                >
+                  <option value="1">Chụp X-Quang</option>
+                  <option value="2">Chụp Cộng hưởng từ</option>
+                  <option value="3">Siêu âm</option>
+                </select>
               </div>
             </div>
-            <p>
-              * Lưu ý: Thời gian khám trên chỉ là thời gian dự kiến, tổng đài sẽ
-              tự liên hệ xác nhận
-            </p>
+
+            <div class="body-part">
+              <div class="select-date">
+                <h3 for="">Chọn lịch khám *</h3>
+                <div class="select-date-input">
+                  <div class="input-ratio-label-field">
+                    <label for="1">
+                      <h3>22/3</h3>
+                      <p>Thứ 3</p>
+                    </label>
+                    <input type="radio" name="select-date" id="1" checked />
+                  </div>
+
+                  <div class="input-ratio-label-field">
+                    <label for="2">
+                      <h3>22/3</h3>
+                      <p>Thứ 3</p>
+                    </label>
+                    <input type="radio" name="select-date" id="2" />
+                  </div>
+
+                  <div class="input-ratio-label-field">
+                    <label for="3">
+                      <h3>22/3</h3>
+                      <p>Thứ 3</p>
+                    </label>
+                    <input type="radio" name="select-date" id="3" />
+                  </div>
+                </div>
+              </div>
+              <p>
+                * Lưu ý: Thời gian khám trên chỉ là thời gian dự kiến, tổng đài
+                sẽ tự liên hệ xác nhận thời gian chính xác tới quý khách sau khi
+                quý khách đặt hẹn.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
+      <div id="infomation-form">
+        <div class="section-item">
+          <div class="section-item__header">
+            <h1>Thông tin bệnh nhân</h1>
+          </div>
+          <div class="section-item__body">
+            <div class="">
+              <div class="input-field">
+                <label for="fullname">Họ và tên <span>*</span> </label>
+                <div class="flex-row-center">
+                  <input
+                    type="text"
+                    name=""
+                    id="fullname"
+                    placeholder="Họ và tên"
+                  />
+                  <div class="select-sex">
+                    <div class="input-field">
+                      <input type="radio" name="sex" id="1" />
+                      <label for="1">Nam</label>
+                    </div>
+
+                    <div class="input-field">
+                      <input type="radio" name="sex" id="2" />
+                      <label for="2">Nữ</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-field">
+                <label for="phone-number">Số điện thoại <span>*</span> </label>
+                <input
+                  type="number"
+                  maxlength="10"
+                  name=""
+                  id="phone-number"
+                  placeholder="Nhập số điện thoại"
+                />
+              </div>
+            </div>
+
+            <div class="">
+              <div class="input-field">
+                <label for="day-of-birth"
+                  >Ngày tháng năm sinh <span>*</span>
+                </label>
+                <input
+                  type="date"
+                  name=""
+                  id="day-of-birth"
+                  placeholder="Ngày tháng năm sinh"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name=""
+                  id="email"
+                  placeholder="Nhập Email"
+                />
+              </div>
+            </div>
+
+            <div id="symptoms-of-the-disease">
+              <div class="input-field">
+                <label for="">Lý do khám <span>*</span></label>
+                <textarea name="" id="email" placeholder="Triệu chứng của bạn">
+                </textarea>
+              </div>
+            </div>
+
+            <div id="policies-and-terms">
+              <div class="input-field">
+                <input type="checkbox" name="" id="helo" />
+                <label for="helo">
+                  Tôi đã đọc và xác nhận
+                  <a href="">Điều khoản sử dụng</a>
+                  của Bệnh viện. <span>*</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-item__footer">
+            <button class="btn-base btn-base--yellow">Gửi thông tin</button>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <footer>

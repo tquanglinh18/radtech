@@ -351,11 +351,22 @@ header {
 }
 
 .featured-news-item {
-  @include flex-row-between();
-  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 2rem;
   width: 100%;
+
+  @include tablet {
+    @include flex-row-between();
+    align-items: start;
+  }
   &__img {
-    width: 50%;
+    width: 100%;
+    @include tablet {
+      width: 50%;
+    }
     box-shadow: 0px 22px 32px 0px #3f87f729;
     border-radius: 2rem;
     img {
@@ -367,10 +378,17 @@ header {
   }
 
   &__detail {
-    width: 45%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
+    @include tablet {
+      width: 45%;
+      justify-content: start;
+      align-items: start;
+    }
     h3 {
       font-size: 2rem;
       font-weight: bold;
@@ -395,12 +413,22 @@ header {
   &__header {
     width: 100%;
     h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: bold;
+      @include tablet {
+        font-size: 1.75rem;
+      }
+
+      @include desktop {
+        font-size: 2rem;
+      }
     }
     h3 {
-      font-size: 1rem;
+      font-size: 0.875rem;
       line-height: 1.5rem;
+      @include tablet {
+        font-size: 1rem;
+      }
     }
 
     &--center {
@@ -425,6 +453,8 @@ header {
 
 .services-card {
   width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
   border-radius: 1.5rem;
   position: relative;
   @include flex-col-center();
@@ -453,14 +483,31 @@ header {
 
 .services-layout {
   width: 100%;
-  @include grid-cols-3();
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
   gap: 2rem;
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 #services {
-  .nav-tabs {
-    border: none;
+  .tabs-header {
+    width: 100%;
+    overflow: auto;
     margin-bottom: 1rem;
+  }
+  .nav-tabs {
+    width: 100%;
+    min-width: 880px;
+    border: none;
+    @include flex-row-center();
+    justify-content: start;
+    flex-wrap: nowrap;
 
     .nav-item {
       &:first-child {
@@ -471,6 +518,7 @@ header {
     }
 
     .nav-link {
+      width: 100%;
       color: $grey-252525;
       font-size: 1.25rem;
       font-weight: bold;
@@ -490,6 +538,9 @@ header {
 }
 
 .doctor-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
   color: $bule-226DA9;
   @include flex-col-center();
   gap: 1rem;
@@ -533,12 +584,14 @@ header {
     }
     .slick-slide.slick-current + .slick-slide {
       scale: 1;
-      transition: all 01s;
+      transition: all 1s;
     }
 
     .slick-slide,
     .doctor-info:first-child {
-      scale: 0.9;
+      @include tablet {
+        scale: 0.9;
+      }
       margin: auto;
       transition: all 1s;
     }
@@ -581,8 +634,11 @@ header {
 
   .carousel-layout {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -645,7 +701,8 @@ header {
 
 .news-card {
   width: 100%;
-  max-width: 390px;
+  max-width: 480px;
+  margin: 0 auto;
   @include flex-col-center();
   box-shadow: 0px 0px 20px 0px $shadow-0000001A;
   border-radius: 1.5rem;
@@ -705,25 +762,35 @@ header {
   width: 100%;
   background-color: $yellow-EDD271;
   color: $grey-252525;
-  h3 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+
+  .section-item {
+    &__body {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 
-  p {
-    font-weight: normal;
-    font-size: 1.25rem;
-  }
   .contact-method {
     height: 100%;
     @include flex-col-between();
+    font-size: 1.25rem !important;
+    @include tablet {
+      font-size: 1.375rem;
+    }
 
     &--item {
       @include flex-row-center();
       gap: 1rem;
-      font-size: 1.25rem;
       font-weight: 500;
       line-height: 1.75rem;
+      font-size: 1rem !important;
+      @include tablet {
+        font-size: 1.25rem;
+      }
     }
 
     .contact-method-lst {
@@ -742,7 +809,10 @@ header {
   border-radius: 1.25rem;
   padding: 2rem;
   background-color: white;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  @include tablet {
+    font-size: 1.25rem;
+  }
   @include flex-col-center();
   gap: 1rem;
   .btn-base {
@@ -755,19 +825,48 @@ footer {
   background-color: $bule-226DA9;
   color: white;
   .logo-radtech {
+    width: 100%;
+    @include flex-col-center();
+
     img {
-      margin-bottom: 1.5rem;
+      width: 100%;
+      max-width: 128px;
+      aspect-ratio: 128/70;
+      object-fit: contain;
+    }
+    p {
+      width: 100%;
     }
   }
 
   .first-part {
     margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    @include tablet {
+      @include grid-cols-4();
+    }
   }
 
   .second-part {
     width: 100%;
     border-top: 1px solid white;
     padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+    @include desktop {
+      @include flex-row-between();
+    }
+
+    img {
+      width: 100%;
+      max-width: 170px;
+      aspect-ratio: 170/30;
+      object-fit: contain;
+    }
   }
 }
 
@@ -785,6 +884,10 @@ footer {
     justify-content: start;
     align-items: start;
     gap: 0.5rem;
+    font-size: 0.875rem;
+    @include tablet {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -929,6 +1032,7 @@ footer {
     background-color: $white-color;
     color: $black-3E3E3E;
     font-size: 14px;
+
     h3 {
       font-size: 1rem;
       margin-bottom: 0;
@@ -1170,9 +1274,13 @@ footer {
   );
   .section-item {
     position: relative;
+    align-items: start;
     top: 15%;
-    max-width: 768px;
-    margin-left: 0;
+    &__header, &__body {
+      width: 100%;
+      max-width: 768px;
+      margin-left: 0;
+    }
   }
 }
 
@@ -1182,13 +1290,52 @@ footer {
   background-position: top left;
   background-size: 100% auto;
   background-repeat: no-repeat;
+
+  .video-layout {
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 1rem;
+
+.iframe-video {
+  width: 100%;
+  position: relative;
+&__bg {
+  width: 100%;
+  border-radius: 0.25rem;
+
+
+}
+&__title {
+
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: #132432;
+  opacity: 0.4;
+}
+
+&__overlay {
+
+}
+}
+  }
 }
 
 #benefit-intro {
   background-color: $light-blue-CEE8FA;
 
   .lst-benefit {
-    @include grid-cols-3();
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   .benefit-item {
@@ -1228,28 +1375,175 @@ footer {
 }
 
 #register-form {
-  background-color: $white-color;
+  .section-item {
+    &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+      @include desktop {
+        flex-direction: row;
+      }
+
+      .select-date {
+        > h3 {
+          margin-bottom: 1.5rem;
+          font-size: 1.25rem;
+          color: $grey-534E56;
+        }
+      }
+
+      .select-date-input {
+        display: flex;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .input-ratio-label-field {
+        color: $white-color;
+        background-color: $grey-999999;
+        padding: 1rem;
+        border-radius: 1rem;
+        @include flex-col-center();
+        text-align: center;
+        cursor: pointer;
+        &:has(input:checked) {
+          background-color: $grey-534E56;
+        }
+        label {
+          margin-bottom: 0;
+        }
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.body-part {
+  width: 100%;
+  @include desktop {
+    width: 50%;
+  }
+}
+
+#infomation-form {
+  margin-bottom: 0;
+  .section-item {
+    &__body {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0rem 2rem;
+
+      @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  .input-field {
+    width: 100%;
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0;
+      border: 1px solid $grey-252525;
+      color: $text-main-color;
+      background-color: $grey-F0F2F5;
+    }
+  }
+
+  .select-sex {
+    height: 100%;
+    @include flex-row-center();
+    padding-left: 1rem;
+    gap: 1.5rem;
+
+    .input-field {
+      @include flex-row-center();
+      margin-bottom: 0;
+      label {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .input-field {
   width: 100%;
+  margin-bottom: 1.5rem;
   label {
     width: 100%;
     font-size: 14px;
     font-weight: bold;
     line-height: 1.25rem;
     text-align: left;
+    color: #0078c5;
   }
   span {
     color: $red-D40000;
   }
 
-  input, select {
+  input,
+  select,
+  textarea {
     width: 100%;
     padding: 1rem;
     border-radius: 0.5rem;
     border: none;
     color: $text-main-color;
     background-color: $grey-F0F2F5;
+  }
+}
+
+#symptoms-of-the-disease {
+  grid-column: 1 / 3;
+
+  textarea {
+    min-height: 124px;
+  }
+}
+
+#policies-and-terms {
+  .input-field {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0;
+    label {
+      color: $text-main-color;
+      font-weight: 400;
+      margin-bottom: 0;
+
+      a {
+        color: #0078c5;
+        font-weight: bold;
+      }
+    }
+
+    input {
+      width: fit-content;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}
+
+.container-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4% auto;
+  border-radius: 1.5rem;
+  background-color: $white-color;
+}
+
+.news-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 1fr);
+  @include tablet {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
