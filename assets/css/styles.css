@@ -1276,24 +1276,79 @@ footer .second-part img {
 }
 #video-intro .video-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+}
+@media (min-width: 768px) {
+  #video-intro .video-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 #video-intro .video-layout .iframe-video {
   width: 100%;
   position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+  overflow: hidden;
+  border-radius: 1rem;
 }
 #video-intro .video-layout .iframe-video__bg {
   width: 100%;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
 }
-#video-intro .video-layout .iframe-video__title {
+#video-intro .video-layout .iframe-video__bg img {
   width: 100%;
   height: 100%;
-  padding: 1rem;
-  background-color: #132432;
-  opacity: 0.4;
+  object-fit: cover;
+  border-radius: 1rem;
+  aspect-ratio: 5/3;
 }
+#video-intro .video-layout .iframe-video__over {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+}
+#video-intro .video-layout .iframe-video__over--btn-play {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+#video-intro .video-layout .iframe-video__over--btn-play img {
+  width: 36px;
+  height: 36px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}
+#video-intro .video-layout .iframe-video__over--title {
+  color: white;
+  line-height: 2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+#video-intro .video-layout .iframe-video:first-child {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  font-size: 1.25em;
+}
+#video-intro .video-layout .iframe-video img {
+  transition: all 0.3s;
+}
+#video-intro .video-layout .iframe-video:hover img {
+  transform: scale(1.2);
+}
+
 #benefit-intro {
   background-color: #cee8fa;
 }
@@ -1316,6 +1371,8 @@ footer .second-part img {
   width: 100%;
   display: flex;
   gap: 1.5rem;
+  max-width: 480px;
+  margin: 0 auto;
 }
 #benefit-intro .benefit-item__order-item {
   width: 64px;
@@ -1522,4 +1579,104 @@ footer .second-part img {
   .news-layout {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+#x-ray-step .section-item__body {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  #x-ray-step .section-item__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.x-ray-step-item {
+  position: relative;
+  width: 100%;
+}
+.x-ray-step-item__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.x-ray-step-item__info {
+  width: 100%;
+  background-color: #1d93e3;
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  align-items: start;
+  padding: 1rem;
+  margin-bottom: 4rem;
+  color: white;
+}
+.x-ray-step-item__info--detail h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.x-ray-step-item__info--detail ul li {
+  list-style-type: none;
+  list-style-position: inside;
+  font-size: 0.875rem;
+}
+.x-ray-step-item:nth-child(odd) {
+  max-width: 464px;
+  margin-right: auto;
+  margin-left: 0;
+}
+.x-ray-step-item:nth-child(even) {
+  max-width: 345px;
+  margin-right: 0;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+.x-ray-step-item:nth-child(even)::after {
+  top: 50%;
+  left: -5rem;
+  transform: translateX(-7px);
+}
+.x-ray-step-item:nth-child(even)::before {
+  border-left: 2px dashed #1d93e3;
+  border-right: unset;
+  top: 0;
+  left: -5rem;
+  transform: translateY(1.5rem);
+}
+.x-ray-step-item:last-child::after {
+  display: none;
+}
+.x-ray-step-item:last-child::before {
+  display: none;
+}
+.x-ray-step-item:last-child > .x-ray-step-item__info {
+  margin-bottom: 0;
+}
+.x-ray-step-item:first-child::before {
+  top: 50%;
+}
+.x-ray-step-item::after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  background-color: #1d93e3;
+  border-radius: 100%;
+  color: #1d93e3;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: -5rem;
+  transform: translateX(7px);
+}
+.x-ray-step-item::before {
+  content: "";
+  display: block;
+  border-right: 2px dashed #1d93e3;
+  height: 240px;
+  position: absolute;
+  top: 0;
+  right: -5rem;
 }
