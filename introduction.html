@@ -87,7 +87,32 @@
             <a href="./introduction.html"> Giới thiệu </a>
           </div>
           <div class="tab-items">
-            <a href="./services-x-quang.html"> Dịch vụ </a>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="btn-lst-services"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dịch vụ
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="btn-lst-services">
+                <li>
+                  <a class="dropdown-item" href="./services-x-ray.html"
+                    >X-quang</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Siêu âm</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Chụp các lớp vi tính</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Chụp cộng hưởng từ</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="tab-items">
             <a href="./news.html"> Tin tức - Sự kiện </a>
@@ -96,7 +121,9 @@
             <a href=""> Tra cứu kết quả </a>
           </div>
           <div class="tab-items">
-            <a href="./set-calendar.html" class="btn-base btn-base--gradient">Đặt lịch khám</a>
+            <a href="./set-calendar.html" class="btn-base btn-base--gradient"
+              >Đặt lịch khám</a
+            >
           </div>
         </div>
       </div>
@@ -211,12 +238,28 @@
                   <div class="dot-inner"></div>
                 </li>
               </ol>
-              <a class="carousel-control-prev" href="#banner-carousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <a
+                class="carousel-control-prev"
+                href="#banner-carousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="sr-only">Previous</span>
               </a>
-              <a class="carousel-control-next" href="#banner-carousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <a
+                class="carousel-control-next"
+                href="#banner-carousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="sr-only">Next</span>
               </a>
             </div>
@@ -230,7 +273,7 @@
         <div class="section-item">
           <div class="section-item__body">
             <div class="row">
-              <div class="col-4">
+              <div class="col-12 col-lg-4 mb-4">
                 <div
                   class="nav flex-column nav-pills"
                   id="lst-room"
@@ -277,7 +320,7 @@
                   </button>
                 </div>
               </div>
-              <div class="col-8">
+              <div class="col-12 col-lg-8">
                 <div class="tab-content" id="lst-roomContent">
                   <div
                     class="tab-pane fade show active"

@@ -127,6 +127,38 @@ header {
   max-width: 1440px;
   margin: 0 auto;
 
+  .dropdown {
+    button {
+      background-color: transparent;
+      color: $text-main-color;
+      border: none;
+
+      &:hover {
+        background-color: transparent;
+        color: $bule-226DA9;
+      }
+    }
+    &:hover {
+      > .dropdown-menu {
+        display: block;
+        transform: translateY(-0.125rem);
+        height: fit-content;
+      }
+    }
+
+    .dropdown-menu {
+      border: none;
+      .dropdown-item {
+        padding: 0.5rem 2rem;
+      }
+      li {
+        :hover {
+          color: $bule-226DA9;
+        }
+      }
+    }
+  }
+
   &__first {
     @include flex-row-between();
     @include desktop {
@@ -211,12 +243,17 @@ header {
     }
 
     .contacts {
-      @include flex-row-center();
+      display: flex;
+      align-items: center;
+      gap: 1rem;
 
       &--name {
         display: none;
         @include desktop {
-          display: block;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
         }
       }
     }
@@ -290,6 +327,10 @@ header {
   border-radius: 10px;
   color: white;
   font-weight: 600;
+  transition: all 0.3s;
+  &:hover {
+    scale: 1.1 !important;
+  }
 
   &--blue-226DA9 {
     padding: 1rem 2rem;
@@ -304,6 +345,12 @@ header {
     box-shadow: 0px 8px 23px 0px #4184f73d;
     color: $bule-226DA9;
     background: $yellow-EDD271;
+  }
+
+  &--gradient {
+    &:hover {
+      color: white;
+    }
   }
 }
 
@@ -501,6 +548,7 @@ header {
     width: 100%;
     overflow: auto;
     margin-bottom: 1rem;
+    min-height: 48px;
   }
   .nav-tabs {
     width: 100%;
@@ -934,6 +982,11 @@ footer {
 
 #lst-medical-clinic {
   color: $grey-252525;
+  .section-item {
+    &__body {
+      display: flex;
+    }
+  }
   .nav {
     width: 100%;
     padding: 2rem 1rem;
@@ -1095,10 +1148,12 @@ footer {
   }
 
   .nav-header {
-    position: sticky;
-    top: 200px;
-    margin-right: auto;
-    margin-left: auto;
+@include desktop {
+  position: sticky;
+  top: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
   }
 
   .featured-news-item {
@@ -1607,7 +1662,7 @@ footer {
     &__body {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      gap: 1rem;
+      gap: 2rem;
       @include tablet {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1617,110 +1672,137 @@ footer {
 
 .x-ray-step-item {
   position: relative;
-  width: 100%;
+  width: calc(100% - 32px);
+  background-color: $blue-1d93e3;
+  display: flex;
+  gap: 1rem;
+  justify-content: start;
+  align-items: start;
+  padding: 1rem;
+  margin-bottom: 4rem;
+  color: white;
 
-  &__icon {
+  &--icon {
     position: absolute;
     top: 0;
     right: 0;
     transform: translate(50%, -50%);
   }
 
-  &__info {
-    width: 100%;
-    background-color: $blue-1d93e3;
-    display: flex;
-    gap: 1rem;
-    justify-content: start;
-    align-items: start;
-    padding: 1rem;
-    margin-bottom: 4rem;
-    color: white;
+  &--detail {
+    h3 {
+      font-size: 1.125rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
 
-    &--detail {
-      h3 {
-        font-size: 1.125rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-      }
-
-      ul {
-        li {
-          list-style-type: none;
-          list-style-position: inside;
-          font-size: 0.875rem;
-        }
+    ul {
+      li {
+        list-style-type: none;
+        list-style-position: inside;
+        font-size: 0.875rem;
       }
     }
   }
+}
 
-  &:nth-child(odd) {
-    max-width: 464px;
-    margin-right: auto;
-    margin-left: 0;
-  }
+.x-ray-step-item-container {
+  position: relative;
+  width: calc(100% - 32px);
 
-  &:nth-child(even) {
-    max-width: 345px;
-    margin-right: 0;
-    margin-left: auto;
-    margin-right: 2rem;
-
-    &::after {
-      top: 50%;
-      left: -5rem;
-      transform: translateX(-7px);
-    }
-
+  &:first-child {
     &::before {
-      border-left: 2px dashed $blue-1d93e3;
-      border-right: unset;
-      top: 0;
-      left: -5rem;
-      transform: translateY(1.5rem);
+      content: "";
+      display: block;
+      border-right: 2px dashed $blue-1d93e3;
+      height: 240px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(0) !important;
     }
   }
 
   &:last-child {
     &::after {
-      display: none;
+      display: none !important;
     }
 
     &::before {
-      display: none;
-    }
-    > .x-ray-step-item__info {
-      margin-bottom: 0;
+      display: none !important;
     }
   }
+  &:nth-child(odd) {
+    .x-ray-step-item {
+      max-width: 464px;
+      margin-left: 0;
+      margin-right: auto;
+    }
 
-  &:first-child {
-    &::before {
+    &::after {
+      content: "";
+      height: 1rem;
+      width: 1rem;
+      background-color: $blue-1d93e3;
+      border-radius: 100%;
+      color: $blue-1d93e3;
+      display: block;
+      position: absolute;
       top: 50%;
+      right: -7px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      border-right: 2px dashed $blue-1d93e3;
+      height: 240px;
+      position: absolute;
+      right: 0;
     }
   }
 
-  &::after {
-    content: "";
-    height: 1rem;
-    width: 1rem;
-    background-color: $blue-1d93e3;
-    border-radius: 100%;
-    color: $blue-1d93e3;
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: -5rem;
-    transform: translateX(7px);
-  }
+  &:nth-child(even) {
+    .x-ray-step-item {
+      max-width: 345px;
+      margin-right: 0;
+      margin-left: auto;
+    }
 
-  &::before {
-    content: "";
-    display: block;
-    border-right: 2px dashed $blue-1d93e3;
-    height: 240px;
-    position: absolute;
-    top: 0;
-    right: -5rem;
+    &::after {
+      content: "";
+      height: 1rem;
+      width: 1rem;
+      background-color: $blue-1d93e3;
+      border-radius: 100%;
+      color: $blue-1d93e3;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: calc(15% - 7px);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      border-right: 2px dashed $blue-1d93e3;
+      height: 240px;
+      position: absolute;
+      left: calc(15%);
+    }
+  }
+}
+
+.lst-img-intro {
+  width: 100%;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+#btn-lst-hotline {
+  &::after {
+    display: none;
   }
 }

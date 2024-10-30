@@ -87,7 +87,32 @@
             <a href="./introduction.html"> Giới thiệu </a>
           </div>
           <div class="tab-items">
-            <a href="./services-x-quang.html"> Dịch vụ </a>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="btn-lst-services"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dịch vụ
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="btn-lst-services">
+                <li>
+                  <a class="dropdown-item" href="./services-x-ray.html"
+                    >X-quang</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Siêu âm</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Chụp các lớp vi tính</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Chụp cộng hưởng từ</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="tab-items">
             <a href="./news.html"> Tin tức - Sự kiện </a>
@@ -463,19 +488,17 @@
             </h1>
           </div>
           <div class="section-item__body">
-            <div class="lst-img-intro"></div>
+            <div class="lst-img-intro">
+              <img src="./assets/images/x-ray-img-step.png" alt="" />
+            </div>
 
             <div class="x-ray-step-contents">
-              <div class="x-ray-step-item">
-                <div class="x-ray-step-item__icon">
-                  <img src="./assets/images/ic_step_ord_1.png" alt="" />
-                </div>
-
-                <div class="x-ray-step-item__info">
-                  <div class="x-ray-step-item__info--ord">
+              <div class="x-ray-step-item-container">
+                <div class="x-ray-step-item">
+                  <div class="x-ray-step-item--ord">
                     <img src="./assets/images/img_count_1.png" alt="" />
                   </div>
-                  <div class="x-ray-step-item__info--detail">
+                  <div class="x-ray-step-item--detail">
                     <h3>Đăng ký lịch hẹn</h3>
 
                     <ul>
@@ -488,18 +511,18 @@
                       </li>
                     </ul>
                   </div>
+
+                  <div class="x-ray-step-item--icon">
+                    <img src="./assets/images/ic_step_ord_1.png" alt="" />
+                  </div>
                 </div>
               </div>
-              <div class="x-ray-step-item">
-                <div class="x-ray-step-item__icon">
-                  <img src="./assets/images/ic_step_ord_2.png" alt="" />
-                </div>
-
-                <div class="x-ray-step-item__info">
-                  <div class="x-ray-step-item__info--ord">
+              <div class="x-ray-step-item-container">
+                <div class="x-ray-step-item">
+                  <div class="x-ray-step-item--ord">
                     <img src="./assets/images/img_count_2.png" alt="" />
                   </div>
-                  <div class="x-ray-step-item__info--detail">
+                  <div class="x-ray-step-item--detail">
                     <h3>Lấy mẫu tận nơi</h3>
 
                     <ul>
@@ -512,19 +535,18 @@
                       </li>
                     </ul>
                   </div>
+                  <div class="x-ray-step-item--icon">
+                    <img src="./assets/images/ic_step_ord_2.png" alt="" />
+                  </div>
                 </div>
               </div>
 
-              <div class="x-ray-step-item">
-                <div class="x-ray-step-item__icon">
-                  <img src="./assets/images/ic_step_ord_3.png" alt="" />
-                </div>
-
-                <div class="x-ray-step-item__info">
-                  <div class="x-ray-step-item__info--ord">
+              <div class="x-ray-step-item-container">
+                <div class="x-ray-step-item">
+                  <div class="x-ray-step-item--ord">
                     <img src="./assets/images/img_count_3.png" alt="" />
                   </div>
-                  <div class="x-ray-step-item__info--detail">
+                  <div class="x-ray-step-item--detail">
                     <h3>Trả kết quả</h3>
 
                     <ul>
@@ -533,19 +555,18 @@
                       <li>Trả tận nơi</li>
                     </ul>
                   </div>
+                  <div class="x-ray-step-item--icon">
+                    <img src="./assets/images/ic_step_ord_3.png" alt="" />
+                  </div>
                 </div>
               </div>
 
-              <div class="x-ray-step-item">
-                <div class="x-ray-step-item__icon">
-                  <img src="./assets/images/ic_step_ord_4.png" alt="" />
-                </div>
-
-                <div class="x-ray-step-item__info">
-                  <div class="x-ray-step-item__info--ord">
+              <div class="x-ray-step-item-container">
+                <div class="x-ray-step-item">
+                  <div class="x-ray-step-item--ord">
                     <img src="./assets/images/img_count_4.png" alt="" />
                   </div>
-                  <div class="x-ray-step-item__info--detail">
+                  <div class="x-ray-step-item--detail">
                     <h3>Tư vấn kết quả</h3>
 
                     <ul>
@@ -555,19 +576,19 @@
                       </li>
                     </ul>
                   </div>
+
+                  <div class="x-ray-step-item--icon">
+                    <img src="./assets/images/ic_step_ord_4.png" alt="" />
+                  </div>
                 </div>
               </div>
 
-              <div class="x-ray-step-item">
-                <div class="x-ray-step-item__icon">
-                  <img src="./assets/images/ic_step_ord_5.png" alt="" />
-                </div>
-
-                <div class="x-ray-step-item__info">
-                  <div class="x-ray-step-item__info--ord">
+              <div class="x-ray-step-item-container">
+                <div class="x-ray-step-item">
+                  <div class="x-ray-step-item--ord">
                     <img src="./assets/images/img_count_5.png" alt="" />
                   </div>
-                  <div class="x-ray-step-item__info--detail">
+                  <div class="x-ray-step-item--detail">
                     <h3>Trả kết quả</h3>
 
                     <ul>
@@ -575,6 +596,9 @@
                       <li>Tra cứu trên website</li>
                       <li>Trả tận nơi</li>
                     </ul>
+                  </div>
+                  <div class="x-ray-step-item--icon">
+                    <img src="./assets/images/ic_step_ord_5.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -584,6 +608,201 @@
             <a href="./set-calendar.html" class="btn-base btn-base--gradient"
               >Đặt lịch khám</a
             >
+          </div>
+        </div>
+      </div>
+
+      <div id="services">
+        <div class="section-item">
+          <div class="section-item__header">
+            <h1>Dịch vụ khác</h1>
+          </div>
+          <div class="section-item__body">
+            <div class="tabs-header">
+              <ul class="nav nav-tabs" id="all-services" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="sieu-am-tab"
+                    data-toggle="tab"
+                    data-target="#sieu-am"
+                    type="button"
+                    role="tab"
+                    aria-controls="sieu-am"
+                    aria-selected="true"
+                  >
+                    Siêu âm
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="chup-ct-tab"
+                    data-toggle="tab"
+                    data-target="#chup-ct"
+                    type="button"
+                    role="tab"
+                    aria-controls="chup-ct"
+                    aria-selected="false"
+                  >
+                    Chụp các lớp vi tính
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="chup-cong-huong-tu-tab"
+                    data-toggle="tab"
+                    data-target="#chup-cong-huong-tu"
+                    type="button"
+                    role="tab"
+                    aria-controls="chup-cong-huong-tu"
+                    aria-selected="false"
+                  >
+                    Cộng hưởng từ
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content" id="all-servicesContent">
+              <div
+                class="tab-pane fade show active"
+                id="sieu-am"
+                role="tabpanel"
+                aria-labelledby="sieu-am-tab"
+              >
+                <div class="services-layout">
+                  <div class="card-effect services-card">
+                    <div class="services-card--img">
+                      <img
+                        src="https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?cs=srgb&dl=pexels-digitech-1438761.jpg&fm=jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="services-card--desc">
+                      <p>
+                        Toko tempat meramu dan menjual obat berdasarkan resep
+                        dokter serta
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card-effect services-card">
+                    <div class="services-card--img">
+                      <img
+                        src="https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?cs=srgb&dl=pexels-digitech-1438761.jpg&fm=jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="services-card--desc">
+                      <p>
+                        Toko tempat meramu dan menjual obat berdasarkan resep
+                        dokter serta
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="card-effect services-card">
+                    <div class="services-card--img">
+                      <img
+                        src="https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?cs=srgb&dl=pexels-digitech-1438761.jpg&fm=jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="services-card--desc">
+                      <p>
+                        Toko tempat meramu dan menjual obat berdasarkan resep
+                        dokter serta
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="chup-ct"
+                role="tabpanel"
+                aria-labelledby="chup-ct-tab"
+              >
+                <div class="services-layout">
+                  <div class="card-effect services-card">
+                    <div class="services-card--img">
+                      <img
+                        src="https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?cs=srgb&dl=pexels-digitech-1438761.jpg&fm=jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="services-card--desc">
+                      <p>Chụp CT các lớp</p>
+                    </div>
+                  </div>
+
+                  <div class="card-effect services-card">
+                    <div class="services-card--img">
+                      <img
+                        src="https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?cs=srgb&dl=pexels-digitech-1438761.jpg&fm=jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="services-card--desc">
+                      <p>Chụp CT các lớp</p>
+                    </div>
+                  </div>
+
+                  <div class="card-effect services-card">
+                    <div class="services-card--img">
+                      <img
+                        src="https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?cs=srgb&dl=pexels-digitech-1438761.jpg&fm=jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="services-card--desc">
+                      <p>Chụp CT các lớp</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="chup-cong-huong-tu"
+                role="tabpanel"
+                aria-labelledby="chup-cong-huong-tu-tab"
+              >
+                <div class="services-layout">
+                  <div class="card-effect services-card">
+                    <div class="services-card--img">
+                      <img
+                        src="https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?cs=srgb&dl=pexels-digitech-1438761.jpg&fm=jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="services-card--desc">
+                      <p>Chụp Cộng hưởng từ</p>
+                    </div>
+                  </div>
+
+                  <div class="card-effect services-card">
+                    <div class="services-card--img">
+                      <img
+                        src="https://images.pexels.com/photos/1438761/pexels-photo-1438761.jpeg?cs=srgb&dl=pexels-digitech-1438761.jpg&fm=jpg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="services-card--desc">
+                      <p>Chụp Cộng hưởng từ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

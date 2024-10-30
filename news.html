@@ -87,7 +87,32 @@
             <a href="./introduction.html"> Giới thiệu </a>
           </div>
           <div class="tab-items">
-            <a href="./services-x-quang.html"> Dịch vụ </a>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="btn-lst-services"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dịch vụ
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="btn-lst-services">
+                <li>
+                  <a class="dropdown-item" href="./services-x-ray.html"
+                    >X-quang</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Siêu âm</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Chụp các lớp vi tính</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Chụp cộng hưởng từ</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="tab-items">
             <a href="./news.html"> Tin tức - Sự kiện </a>
@@ -96,7 +121,9 @@
             <a href=""> Tra cứu kết quả </a>
           </div>
           <div class="tab-items">
-            <a href="./set-calendar.html" class="btn-base btn-base--gradient">Đặt lịch khám</a>
+            <a href="./set-calendar.html" class="btn-base btn-base--gradient"
+              >Đặt lịch khám</a
+            >
           </div>
         </div>
       </div>
@@ -146,401 +173,8 @@
             <h1>Tin tức hoạt động</h1>
           </div>
           <div class="section-item__body">
-            <div class="row">
-              <div class="col-8">
-                <div class="tab-content" id="lst-roomContent">
-                  <div
-                    class="tab-pane fade show active"
-                    id="room-1"
-                    role="tabpanel"
-                    aria-labelledby="room-1-tab"
-                  >
-                    <div class="featured-news-item">
-                      <div class="featured-news-item__img">
-                        <img
-                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
-                          alt=""
-                        />
-                      </div>
-
-                      <div class="featured-news-item__detail">
-                        <h3>Giới thiệu</h3>
-                        <p>
-                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
-                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
-                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
-                          bác sỹ.
-                        </p>
-                        <div class="date-post-view flex-row-between">
-                          <div class="flex-row-center">
-                            <div class="flex-row-center">
-                              <img src="./assets/images/ic_clock.png" alt="" />
-                            </div>
-                            <p>30/ 02/ 2021</p>
-                          </div>
-                          <p><span>300 </span> lượt xem</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="featured-news-item">
-                      <div class="featured-news-item__img">
-                        <img
-                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
-                          alt=""
-                        />
-                      </div>
-
-                      <div class="featured-news-item__detail">
-                        <h3>Giới thiệu</h3>
-                        <p>
-                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
-                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
-                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
-                          bác sỹ.
-                        </p>
-                        <div class="date-post-view flex-row-between">
-                          <div class="flex-row-center">
-                            <div class="flex-row-center">
-                              <img src="./assets/images/ic_clock.png" alt="" />
-                            </div>
-                            <p>30/ 02/ 2021</p>
-                          </div>
-                          <p><span>300 </span> lượt xem</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="featured-news-item">
-                      <div class="featured-news-item__img">
-                        <img
-                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
-                          alt=""
-                        />
-                      </div>
-
-                      <div class="featured-news-item__detail">
-                        <h3>Giới thiệu</h3>
-                        <p>
-                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
-                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
-                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
-                          bác sỹ.
-                        </p>
-                        <div class="date-post-view flex-row-between">
-                          <div class="flex-row-center">
-                            <div class="flex-row-center">
-                              <img src="./assets/images/ic_clock.png" alt="" />
-                            </div>
-                            <p>30/ 02/ 2021</p>
-                          </div>
-                          <p><span>300 </span> lượt xem</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="tab-pane fade"
-                    id="room-2"
-                    role="tabpanel"
-                    aria-labelledby="room-2-tab"
-                  >
-                    <div class="room-location">
-                      <p>Cơ sở 2:</p>
-                      <h3>
-                        Trung tâm Chuẩn đoán hình ảnh Radtech Thạch Thất - Hà
-                        Nội
-                      </h3>
-
-                      <div class="room-location--contact-method">
-                        <div class="">
-                          <img src="./assets/images/ic_location.png" alt="" />
-                        </div>
-                        <p>Số 70, Đường 420 Kim Quan, Thạch Thất, Hà Nội</p>
-                      </div>
-
-                      <div class="room-location--contact-method">
-                        <div class="">
-                          <img src="./assets/images/ic_phone.png" alt="" />
-                        </div>
-                        <p>0975 067 969</p>
-                      </div>
-                    </div>
-
-                    <div
-                      id="carousel-room-2"
-                      class="carousel slide"
-                      data-ride="carousel"
-                      data-touch="true"
-                    >
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img
-                            class=""
-                            src="https://phuyentourist.com/wp-content/uploads/2020/04/tour-cao-nguyen-van-hoa-1-ngay-phu-yen-tourist-12.jpg"
-                            alt="First slide"
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            class=""
-                            src="https://phuyentourist.com/wp-content/uploads/2020/04/tour-cao-nguyen-van-hoa-1-ngay-phu-yen-tourist-12.jpg"
-                            alt="Second slide"
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            class=""
-                            src="https://phuyentourist.com/wp-content/uploads/2020/04/tour-cao-nguyen-van-hoa-1-ngay-phu-yen-tourist-12.jpg"
-                            alt="Third slide"
-                          />
-                        </div>
-                      </div>
-                      <ol class="carousel-indicators">
-                        <li
-                          data-target="#carousel-room-2"
-                          data-slide-to="0"
-                          class="active"
-                        >
-                          <div class="dot-inner"></div>
-                        </li>
-                        <li data-target="#carousel-room-2" data-slide-to="1">
-                          <div class="dot-inner"></div>
-                        </li>
-                        <li data-target="#carousel-room-2" data-slide-to="2">
-                          <div class="dot-inner"></div>
-                        </li>
-                      </ol>
-                    </div>
-                    <div class="room-info">
-                      <p>
-                        People Centered Lighthouse was born on March 9, 2020
-                        from an urge to foster cultural diversity and to serve
-                        our communities as exemplified by our Lord and Savior
-                        Jesus Christ. We want to focus on people and not
-                        politics, serving those right here in Dallas and moving
-                        out as the spirit leads.
-                      </p>
-                      <p>
-                        To close the gap between needs and resources will
-                        require more boots on the ground. This starts with
-                        listening to people’s needs and connecting them with
-                        organizations or individuals that have the resources to
-                        meet those needs. Another aspect is to empower people
-                        through coaching and mentoring to become productive
-                        within their communities. Such a venture requires
-                        disruptive actions and social entrepreneurship that is
-                        risk taking yet innovative and people-centric.
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    class="tab-pane fade"
-                    id="room-3"
-                    role="tabpanel"
-                    aria-labelledby="room-3-tab"
-                  >
-                    <div class="room-location">
-                      <p>Cơ sở 3:</p>
-                      <h3>Trung tâm Chuẩn đoán hình ảnh Radtech Nha Trang</h3>
-
-                      <div class="room-location--contact-method">
-                        <div class="">
-                          <img src="./assets/images/ic_location.png" alt="" />
-                        </div>
-                        <p>11 Lý Thánh Tôn, Vạn Thạnh, Nha Trang, Khánh Hoà</p>
-                      </div>
-
-                      <div class="room-location--contact-method">
-                        <div class="">
-                          <img src="./assets/images/ic_phone.png" alt="" />
-                        </div>
-                        <p>0966 870 002</p>
-                      </div>
-                    </div>
-
-                    <div
-                      id="carousel-room-3"
-                      class="carousel slide"
-                      data-ride="carousel"
-                      data-touch="true"
-                    >
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img
-                            class=""
-                            src="https://phuyentourist.com/wp-content/uploads/2020/04/tour-cao-nguyen-van-hoa-1-ngay-phu-yen-tourist-12.jpg"
-                            alt="First slide"
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            class=""
-                            src="https://phuyentourist.com/wp-content/uploads/2020/04/tour-cao-nguyen-van-hoa-1-ngay-phu-yen-tourist-12.jpg"
-                            alt="Second slide"
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            class=""
-                            src="https://phuyentourist.com/wp-content/uploads/2020/04/tour-cao-nguyen-van-hoa-1-ngay-phu-yen-tourist-12.jpg"
-                            alt="Third slide"
-                          />
-                        </div>
-                      </div>
-                      <ol class="carousel-indicators">
-                        <li
-                          data-target="#carousel-room-3"
-                          data-slide-to="0"
-                          class="active"
-                        >
-                          <div class="dot-inner"></div>
-                        </li>
-                        <li data-target="#carousel-room-3" data-slide-to="1">
-                          <div class="dot-inner"></div>
-                        </li>
-                        <li data-target="#carousel-room-3" data-slide-to="2">
-                          <div class="dot-inner"></div>
-                        </li>
-                      </ol>
-                    </div>
-                    <div class="room-info">
-                      <p>
-                        People Centered Lighthouse was born on March 9, 2020
-                        from an urge to foster cultural diversity and to serve
-                        our communities as exemplified by our Lord and Savior
-                        Jesus Christ. We want to focus on people and not
-                        politics, serving those right here in Dallas and moving
-                        out as the spirit leads.
-                      </p>
-                      <p>
-                        To close the gap between needs and resources will
-                        require more boots on the ground. This starts with
-                        listening to people’s needs and connecting them with
-                        organizations or individuals that have the resources to
-                        meet those needs. Another aspect is to empower people
-                        through coaching and mentoring to become productive
-                        within their communities. Such a venture requires
-                        disruptive actions and social entrepreneurship that is
-                        risk taking yet innovative and people-centric.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div
-                    class="tab-pane fade"
-                    id="room-4"
-                    role="tabpanel"
-                    aria-labelledby="room-4-tab"
-                  >
-                    <div class="room-location">
-                      <p>Cơ sở 4:</p>
-                      <h3>Trung tâm Chuẩn đoán hình ảnh Radtech Nha Trang</h3>
-
-                      <div class="room-location--contact-method">
-                        <div class="">
-                          <img src="./assets/images/ic_location.png" alt="" />
-                        </div>
-                        <p>11 Lý Thánh Tôn, Vạn Thạnh, Nha Trang, Khánh Hoà</p>
-                      </div>
-
-                      <div class="room-location--contact-method">
-                        <div class="">
-                          <img src="./assets/images/ic_phone.png" alt="" />
-                        </div>
-                        <p>0966 870 002</p>
-                      </div>
-                    </div>
-
-                    <div
-                      id="carousel-room-3"
-                      class="carousel slide"
-                      data-ride="carousel"
-                      data-touch="true"
-                    >
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img
-                            class=""
-                            src="https://phuyentourist.com/wp-content/uploads/2020/04/tour-cao-nguyen-van-hoa-1-ngay-phu-yen-tourist-12.jpg"
-                            alt="First slide"
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            class=""
-                            src="https://phuyentourist.com/wp-content/uploads/2020/04/tour-cao-nguyen-van-hoa-1-ngay-phu-yen-tourist-12.jpg"
-                            alt="Second slide"
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            class=""
-                            src="https://phuyentourist.com/wp-content/uploads/2020/04/tour-cao-nguyen-van-hoa-1-ngay-phu-yen-tourist-12.jpg"
-                            alt="Third slide"
-                          />
-                        </div>
-                      </div>
-                      <ol class="carousel-indicators">
-                        <li
-                          data-target="#carousel-room-3"
-                          data-slide-to="0"
-                          class="active"
-                        >
-                          <div class="dot-inner"></div>
-                        </li>
-                        <li data-target="#carousel-room-3" data-slide-to="1">
-                          <div class="dot-inner"></div>
-                        </li>
-                        <li data-target="#carousel-room-3" data-slide-to="2">
-                          <div class="dot-inner"></div>
-                        </li>
-                      </ol>
-                    </div>
-                    <div class="room-info">
-                      <p>
-                        People Centered Lighthouse was born on March 9, 2020
-                        from an urge to foster cultural diversity and to serve
-                        our communities as exemplified by our Lord and Savior
-                        Jesus Christ. We want to focus on people and not
-                        politics, serving those right here in Dallas and moving
-                        out as the spirit leads.
-                      </p>
-                      <p>
-                        To close the gap between needs and resources will
-                        require more boots on the ground. This starts with
-                        listening to people’s needs and connecting them with
-                        organizations or individuals that have the resources to
-                        meet those needs. Another aspect is to empower people
-                        through coaching and mentoring to become productive
-                        within their communities. Such a venture requires
-                        disruptive actions and social entrepreneurship that is
-                        risk taking yet innovative and people-centric.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <ul class="pagination">
-                  <li class="page-item">
-                    <a class="page-link" href="#"
-                      ><span aria-hidden="true">&laquo;</span>
-                    </a>
-                  </li>
-                  <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#"
-                      ><span aria-hidden="true">&raquo;</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-4 nav-header">
+            <div class="row flex-row-reverse">
+              <div class="col-12 col-lg-4 nav-header">
                 <div
                   class="nav flex-column nav-pills"
                   id="lst-room"
@@ -599,7 +233,7 @@
                     <p>Tuyển dụng</p>
                   </button>
                 </div>
-                <div class="related-news">
+                <div class="related-news d-none d-lg-block">
                   <h3>Có thể bạn quan tâm</h3>
                   <div class="lst-related-news">
                     <div class="related-news-item">
@@ -642,6 +276,472 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="col-12 col-lg-8">
+                <div class="tab-content" id="lst-roomContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="news-activity"
+                    role="tabpanel"
+                    aria-labelledby="news-activity-tab"
+                  >
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="news"
+                    role="tabpanel"
+                    aria-labelledby="news-tab"
+                  >
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="expert-blog"
+                    role="tabpanel"
+                    aria-labelledby="expert-blog-tab"
+                  >
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="tab-pane fade"
+                    id="recruitment"
+                    role="tabpanel"
+                    aria-labelledby="recruitment-tab"
+                  >
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="featured-news-item">
+                      <div class="featured-news-item__img">
+                        <img
+                          src="https://d8zm9ei35njj5.cloudfront.net/wp-content/uploads/2020/04/Study-Guide.jpg"
+                          alt=""
+                        />
+                      </div>
+
+                      <div class="featured-news-item__detail">
+                        <h3>Giới thiệu</h3>
+                        <p>
+                          Là chuỗi trung tâm cđha kỹ thuật cao, cung cấp các
+                          dịch vụ chụp cộng hưởng từ, CT, chụp nhũ ảnh, siêu âm
+                          trên cả nước. Với tiêu chí nhanh, chính xác, đội ngũ
+                          bác sỹ.
+                        </p>
+                        <div class="date-post-view flex-row-between">
+                          <div class="flex-row-center">
+                            <div class="flex-row-center">
+                              <img src="./assets/images/ic_clock.png" alt="" />
+                            </div>
+                            <p>30/ 02/ 2021</p>
+                          </div>
+                          <p><span>300 </span> lượt xem</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#"
+                      ><span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#"
+                      ><span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

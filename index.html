@@ -43,15 +43,77 @@
             </div>
           </div>
           <div class="header__contacts">
-            <div class="contacts contacts--hotline">
-              <div class="contacts--logo">
-                <img src="./assets/images/ic_chat_hotline.png" alt="" />
-              </div>
-              <div class="contacts--name">
-                <p>Hotline</p>
-                <p>Hỗ trợ khách hàng</p>
-              </div>
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                id="btn-lst-hotline"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <div class="contacts contacts--hotline">
+                  <div class="contacts--logo">
+                    <img src="./assets/images/ic_chat_hotline.png" alt="" />
+                  </div>
+                  <div class="contacts--name">
+                    <p>Hotline</p>
+                    <p>Hỗ trợ khách hàng</p>
+                  </div>
+                </div>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="btn-lst-hotline">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="contacts contacts--hotline">
+                      <div class="contacts--logo">
+                        <img
+                          src="./assets/images/ic_whatsapp_blue_outline.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="contacts--name">
+                        <p><b> Radtech Nha Trang </b></p>
+                        <p>0977878889</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="contacts contacts--hotline">
+                      <div class="contacts--logo">
+                        <img
+                          src="./assets/images/ic_whatsapp_blue_outline.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="contacts--name">
+                        <p><b> Radtech Yết Kiêu - Hà Nội</b></p>
+                        <p>0977878889</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <div class="contacts contacts--hotline">
+                      <div class="contacts--logo">
+                        <img
+                          src="./assets/images/ic_whatsapp_blue_outline.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="contacts--name">
+                        <p><b>Radtech Thạch Thất - Hà Nội</b></p>
+                        <p>0977878889</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
             </div>
+
             <div class="contacts contacts--zalo">
               <div class="contacts--logo">
                 <img src="./assets/images/ic_zalo.png" alt="" />
@@ -87,7 +149,32 @@
             <a href="./introduction.html"> Giới thiệu </a>
           </div>
           <div class="tab-items">
-            <a href="./services-x-quang.html"> Dịch vụ </a>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="btn-lst-services"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dịch vụ
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="btn-lst-services">
+                <li>
+                  <a class="dropdown-item" href="./services-x-ray.html"
+                    >X-quang</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Siêu âm</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Chụp các lớp vi tính</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Chụp cộng hưởng từ</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="tab-items">
             <a href="./news.html"> Tin tức - Sự kiện </a>
