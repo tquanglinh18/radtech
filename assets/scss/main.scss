@@ -445,6 +445,11 @@ header {
     p {
       line-height: 1.5rem;
     }
+
+    .date-post-view {
+      width: 100%;
+      @include flex-row-between();
+    }
   }
 }
 
@@ -526,6 +531,15 @@ header {
     font-size: 20px;
     line-height: 1.25rem;
     color: $white-color;
+    height: 96px;
+    p {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      line-height: 1.5rem;
+    }
   }
 }
 
@@ -704,6 +718,7 @@ header {
 
   &__desc {
     width: 100%;
+    height: 100%;
   }
 
   &__rating {
@@ -785,6 +800,13 @@ header {
     }
     &--desc {
       font-size: 14px;
+      p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5; /* number of lines to show */
+        line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
     }
   }
   &__footer {
@@ -965,6 +987,15 @@ footer {
     }
   }
 
+  .vision-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   #banner-carousel {
     margin-bottom: 0;
     .carousel-inner {
@@ -1088,7 +1119,7 @@ footer {
     font-size: 14px;
 
     h3 {
-      font-size: 1rem;
+      font-size: 1.5rem;
       margin-bottom: 0;
     }
 
@@ -1098,8 +1129,11 @@ footer {
       }
     }
     &__detail {
-      width: 50%;
+      width: 100%;
       padding: 2rem 3rem;
+      @include tablet {
+        width: 50%;
+      }
       p {
         line-height: unset;
       }
@@ -1148,35 +1182,75 @@ footer {
   }
 
   .nav-header {
-@include desktop {
-  position: sticky;
-  top: 200px;
-  margin-right: auto;
-  margin-left: auto;
-}
+    @include desktop {
+      position: sticky;
+      top: 200px;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   .featured-news-item {
     font-size: 14px;
     border-bottom: 1px solid $grey-DDDDDD;
-    padding: 1rem 0;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1019607843);
+    border-radius: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      flex-direction: row;
+      box-shadow: unset;
+      border-radius: 0;
+    }
     h3 {
       font-size: 1rem;
       margin-bottom: 0;
+      width: 100%;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
     }
     &__img {
-      width: 35%;
+      width: 100%;
+      @include tablet {
+        width: 35%;
+      }
       box-shadow: unset;
       img {
+        border-radius: 1rem;
+        @include tablet {
+          border-radius: unset;
+        }
         aspect-ratio: 265/153;
-        border-radius: unset;
       }
     }
 
     &__detail {
-      width: 65%;
-      padding: 0 1rem;
+      width: 100%;
+      padding: 1rem;
+      @include tablet {
+        width: 65%;
+      }
       gap: 0.25rem;
+
+      h3 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
     }
   }
 
@@ -1241,6 +1315,15 @@ footer {
         padding: 0.25rem 1rem;
         font-weight: bold;
         color: $black-222222;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        height: 74px;
+        p {
+          line-height: 1.5rem;
+        }
       }
     }
   }
@@ -1403,7 +1486,7 @@ footer {
           line-height: 2rem;
           overflow: hidden;
           display: -webkit-box;
-          -webkit-line-clamp: 1; /* number of lines to show */
+          -webkit-line-clamp: 1;
           line-clamp: 1;
           -webkit-box-orient: vertical;
         }
@@ -1804,5 +1887,23 @@ footer {
 #btn-lst-hotline {
   &::after {
     display: none;
+  }
+}
+
+#banner-carousel.main-banner {
+  aspect-ratio: unset;
+  width: 100%;
+
+  @include tablet {
+    aspect-ratio: 2048 / 733;
+  }
+
+  height: 100%;
+
+  img {
+    aspect-ratio: 1/1;
+    @include tablet {
+      aspect-ratio: 2048 / 733;
+    }
   }
 }
